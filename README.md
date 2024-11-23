@@ -1,50 +1,74 @@
-# React + TypeScript + Vite
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+# Zustand Tutorial
 
-Currently, two official plugins are available:
+Welcome to the **Zustand Tutorial** repository! This project provides a beginner-friendly guide to using Zustand, a lightweight state management library for React. Zustand is simple, flexible, and ideal for managing state in modern React applications.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## Features
 
-## Expanding the ESLint configuration
+- **Zustand Basics**: Learn how to set up Zustand and manage simple application state.
+- **React Integration**: See how Zustand works seamlessly with React components.
+- **Advanced State Management**: Explore techniques like derived state, middleware, and selectors.
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+## Prerequisites
 
-- Configure the top-level `parserOptions` property like this:
+Before you begin, ensure you have the following installed:
 
-```js
-export default tseslint.config({
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
+- [Node.js](https://nodejs.org/) (version 16+ recommended)
+- [npm](https://www.npmjs.com/) or [yarn](https://yarnpkg.com/)
+
+Familiarity with React is helpful but not required.
+
+## Installation
+
+To get started, clone this repository and install the dependencies:
+
+```bash
+git clone https://github.com/Torres7707/zustand-tutorial.git
+cd zustand-tutorial
+npm install
 ```
 
-- Replace `tseslint.configs.recommended` to `tseslint.configs.recommendedTypeChecked` or `tseslint.configs.strictTypeChecked`
-- Optionally add `...tseslint.configs.stylisticTypeChecked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and update the config:
+## Running the Project
 
-```js
-// eslint.config.js
-import react from 'eslint-plugin-react'
+Run the following command to start the development server:
 
-export default tseslint.config({
-  // Set the react version
-  settings: { react: { version: '18.3' } },
-  plugins: {
-    // Add the react plugin
-    react,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended rules
-    ...react.configs.recommended.rules,
-    ...react.configs['jsx-runtime'].rules,
-  },
-})
+```bash
+npm start
 ```
+
+Then, open [http://localhost:3000](http://localhost:3000) in your browser to see the application.
+
+## Project Structure
+
+The repository follows a simple structure to organize tutorials and examples:
+
+```
+zustand-tutorial/
+├── src/
+│   ├── stores/          # Zustand store configurations
+│   ├── components/      # React components
+│   ├── App.js           # Main application file
+│   └── index.js         # Application entry point
+├── package.json         # Project dependencies and scripts
+└── README.md            # Project documentation
+```
+
+## Topics Covered
+
+1. **Setting Up Zustand**: Learn how to create your first Zustand store.
+2. **State Management**: Manage state efficiently across your React components.
+3. **Selectors**: Use selectors to optimize performance by reducing unnecessary re-renders.
+4. **Middleware**: Add middleware for logging or handling side effects.
+
+## Contributing
+
+Contributions are welcome! Feel free to fork the repository, make your changes, and submit a pull request. Please ensure your code follows best practices and includes clear documentation.
+
+## License
+
+This project is licensed under the [MIT License](LICENSE).
+
+## Resources
+
+- [Zustand Documentation](https://docs.pmnd.rs/zustand/getting-started/introduction)
+- [React Documentation](https://reactjs.org/docs/getting-started.html)
